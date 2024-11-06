@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FONT Family */
+
+@font-face {
+  font-family: textingv1;
+  src: url(/assets/fonts/Anaheim-SemiBold.ttf);
+}
+
+/* FONT Family Ending */
+
+
+body {
+  background-color: #8abfa6;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  margin: 0; 
+}
+
+.general {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 108px;
+}
+
+hr{
+ background-color: #95928E;
+ padding: 3px;
+ border: 1px;
+ width: 792px;
+ display: flex;
+ align-items: center; 
+ border-radius: 10px;
+}
+.hrv2 {
+  background-color: #D98D62;
+  padding: 3px;
+  border: 1px;
+  width: 727px;
+  display: flex;
+  align-items: center; 
+  border-radius: 10px;
+}
+/* LEFT SİDE */
+
+.leftCompartment {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.slideBy {
+  display: flex;
+  flex-direction: column;
+  row-gap: 29px;
+}
+
+.slideByOne {
+  display: flex;
+  gap: 46px;
+  margin-right: 37px;
+}
+
+.slideByTwo {
+  display: flex;
+  gap: 46px;
+  margin-left: 74px;
+}
+
+.boxingv1 {
+  height: 67px;
+  width: 147px;
+  background-color: #d98d62;
+  border-radius: 12px;
+  list-style-type: none;
+}
+
+.inSlideBy {
+  width: 993px;
+  height: 661px;
+  background-color: #bfd9c3;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 66px;
+  padding-bottom: 66px;
+}
+
+.inSlideByOne {
+  display: flex;
+  gap: 114px;
+}
+
+.tripleDexol {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.textingv1 {
+  font-family: textingv1;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+.boxingv2 {
+  border: #C6632B solid 3px;
+  width: 212px;
+  height: 79.32px;
+  background-color: #d98d62;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+
+.inSlideByTwo {
+ width: 723px;
+ height: 327.79px;
+ background-color: #efe3c9;
+ border-radius: 12px;
+ margin-top: 25px;
+ list-style-type: none;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.textingv2 {
+ font-family: textingv1;
+ font-size:36px;
+ padding-top: 14.335px;
+ padding-bottom: 14.335px;
+}
+
+.textingv3 {
+color: #efe3c9;
+padding-top: 16.335px;
+padding-bottom: 16.335px;
+}
+/* RİGHT SİDE */
+
+.rightCompartment {
+  width: 657px;
+  height: 936.67px;
+  background-color: #262523;
+  border-radius: 12px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
