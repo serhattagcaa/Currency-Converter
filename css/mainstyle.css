@@ -13,7 +13,6 @@
 
 /* FONT Family Ending */
 
-
 body {
   background-color: #8abfa6;
   display: flex;
@@ -78,6 +77,9 @@ hr{
   height: 67px;
   width: 147px;
   background-color: #d98d62;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
   list-style-type: none;
 }
@@ -124,6 +126,17 @@ hr{
   margin-top: 20px;
 }
 
+.boxingv2d{
+  border-radius: 12px;
+  margin-top: 20px;
+  display: flex;
+  gap: 0;
+}
+
+.boxingv2d > div {
+  position: relative;
+}
+
 
 .inSlideByTwo {
  width: 723px;
@@ -145,11 +158,6 @@ hr{
  padding-bottom: 14.335px;
 }
 
-.textingv3 {
-color: #efe3c9;
-padding-top: 16.335px;
-padding-bottom: 16.335px;
-}
 /* RİGHT SİDE */
 
 .rightCompartment {
@@ -163,3 +171,94 @@ padding-bottom: 16.335px;
   align-items: center;
   justify-content: center;
 }
+
+.textingv3 {
+  color: #efe3c9;
+  padding-top: 16.335px;
+  padding-bottom: 16.335px;
+  }
+
+
+  @media screen and (max-width: 400px) {    
+  
+    body {
+      height: 1850px; 
+    }
+    
+    body::-webkit-scrollbar {
+      display: none; 
+  }
+  
+    .general {
+      flex-direction: column;
+      gap: 18px;
+    }
+  
+    hr , .hrv2{
+      padding: 1px;
+      width: 302px;
+      border: 0.5px;
+    } 
+
+    /* LEFT SİDE-Responsive */
+
+    .leftCompartment {
+      display: flex;
+      flex-direction: column;
+      gap: 51px;
+    } 
+
+    .slideBy {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+      align-items: center;
+  }
+
+  .slideByOne, .slideByTwo {
+      gap: 21px;
+      overflow: hidden;
+      position: relative;
+  }
+
+  .boxingv1 {
+      width: 120px;
+      height: 50px;
+      font-weight: bold;
+      position: relative;
+  }
+
+  /* Animation for moving right */
+  .slideByOne .boxingv1 {
+      animation: moveRight 10s linear infinite;
+  }
+
+  /* Animation for moving left */
+  .slideByTwo .boxingv1 {
+      animation: moveLeft 10s linear infinite;
+  }
+
+  @keyframes moveRight {
+      0% {
+          transform: translateX(-100%);
+      }
+      100% {
+          transform: translateX(100%);
+      }
+  }
+
+  @keyframes moveLeft {
+      0% {
+          transform: translateX(100%);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+
+
+    .inSlideBy{
+      
+    }
+  }
+  
