@@ -1,10 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
-</head>
-<body>
-</body>
+    <link rel="stylesheet" href="css/mainstyle.css" />
+    <link rel="stylesheet" href="css/dropDownMenu.css" />
+  </head>
+  <body>
+    <div class="general">
+      <!-- Left Pane of the Interface -->
+
+      <section class="leftCompartment">
+        <!-- Current Exchange Rates Pane of the Interface -->
+
+        <header class="slideBy">
+          <ul class="slideByOne" id="slideByOne">
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+          </ul>
+          <ul class="slideByTwo" id="slideByTwo">
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+            <li class="boxingv1">Null</li>
+          </ul>
+        </header>
+
+        <!-- Current Currency Translation Pane of the Interface -->
+
+        <main class="inSlideBy">
+          <ul class="inSlideByOne">
+            <ul class="tripleDexol">
+              <li class="textingv1c">Unit Input:</li>
+              <input
+                class="boxingv2"
+                type="number"
+                id="tentacles"
+                name="tentacles"
+              />
+            </ul>
+            <ul class="tripleDexol">
+              <li class="textingv1d">Curr Select:</li>
+              <div class="boxingv2d">
+                <div>
+                  <button
+                    class="dropdown-button-left"
+                    id="button1"
+                    onclick="toggleDropdown('myDropdown1', 'button1')"
+                  >
+                    CUR
+                  </button>
+                  <div class="dropdown-content-left" id="myDropdown1">
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'AUD'); rateActivation();"
+                      >AUD</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'BGN'); rateActivation();"
+                      >BGN</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'BRL'); rateActivation();"
+                      >BRL</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'CAD'); rateActivation();"
+                      >CAD</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'CHF'); rateActivation();"
+                      >CHF</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'CNY'); rateActivation();"
+                      >CNY</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'CZK'); rateActivation();"
+                      >CZK</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'DKK'); rateActivation();"
+                      >DKK</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'EUR'); rateActivation();"
+                      >EUR</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'GBP'); rateActivation();"
+                      >GBP</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'HKD'); rateActivation();"
+                      >HKD</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'HUF'); rateActivation();"
+                      >HUF</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'IDR'); rateActivation();"
+                      >IDR</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'ILS'); rateActivation();"
+                      >ILS</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'INR'); rateActivation();"
+                      >INR</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'ISK'); rateActivation();"
+                      >ISK</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'JPY'); rateActivation();"
+                      >JPY</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'KRW'); rateActivation();"
+                      >KRW</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'MXN'); rateActivation();"
+                      >MXN</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'MYR'); rateActivation();"
+                      >MYR</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'NOK'); rateActivation();"
+                      >NOK</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'NZD'); rateActivation();"
+                      >NZD</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'PHP'); rateActivation();"
+                      >PHP</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'PLN'); rateActivation();"
+                      >PLN</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'RON'); rateActivation();"
+                      >RON</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'SEK'); rateActivation();"
+                      >SEK</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'SGD'); rateActivation();"
+                      >SGD</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'THB'); rateActivation();"
+                      >THB</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'TRY'); rateActivation();"
+                      >TRY</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'USD'); rateActivation();"
+                      >USD</a
+                    >
+                    <a
+                      href="#"
+                      onclick="selectOption('button1', 'ZAR'); rateActivation();"
+                      >ZAR</a
+                    >
+                  </div>
+                </div>
+
+                <!-- İkinci Dropdown -->
+                <div>
+                  <!-- Döviz Birimi Seçimi için Dropdown -->
+                  <button
+                    class="dropdown-button-right"
+                    id="button2"
+                    onclick="toggleDropdown('myDropdown2', 'button2')"
+                  >
+                  CUR
+                  </button>
+                  <div class="dropdown-content-right" id="myDropdown2">
+                    <a href="#" onclick="selectOption('button2', 'AUD', true)"
+                      >AUD</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'BGN', true)"
+                      >BGN</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'BRL', true)"
+                      >BRL</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'CAD', true)"
+                      >CAD</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'CHF', true)"
+                      >CHF</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'CNY', true)"
+                      >CNY</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'CZK', true)"
+                      >CZK</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'DKK', true)"
+                      >DKK</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'EUR', true)"
+                      >EUR</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'GBP', true)"
+                      >GBP</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'HKD', true)"
+                      >HKD</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'HUF', true)"
+                      >HUF</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'IDR', true)"
+                      >IDR</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'ILS', true)"
+                      >ILS</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'INR', true)"
+                      >INR</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'ISK', true)"
+                      >ISK</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'JPY', true)"
+                      >JPY</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'KRW', true)"
+                      >KRW</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'MXN', true)"
+                      >MXN</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'MYR', true)"
+                      >MYR</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'NOK', true)"
+                      >NOK</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'NZD', true)"
+                      >NZD</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'PHP', true)"
+                      >PHP</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'PLN', true)"
+                      >PLN</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'RON', true)"
+                      >RON</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'SEK', true)"
+                      >SEK</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'SGD', true)"
+                      >SGD</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'THB', true)"
+                      >THB</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'TRY', true)"
+                      >TRY</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'USD', true)"
+                      >USD</a
+                    >
+                    <a href="#" onclick="selectOption('button2', 'ZAR', true)"
+                      >ZAR</a
+                    >
+                  </div>
+
+                  <!-- Sonuçları göstermek için bir alan -->
+                </div>
+              </div>
+            </ul>
+            <ul class="tripleDexol">
+              <li class="textingv1">Changed Value:</li>
+              <li id="result" class="boxingv2c">0.00</li>
+            </ul>
+          </ul>
+
+          <ul class="inSlideByTwo">
+            <li class="textingv2" id="item1">Null</li>
+            <hr />
+            <li class="textingv2" id="item2">Null</li>
+            <hr />
+            <li class="textingv2" id="item3">Null</li>
+            <hr />
+            <li class="textingv2" id="item4">Null</li>
+        </ul>
+    
+        </main>
+      </section>
+      <article class="rightCompartment">
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+        <hr class="hrv2" />
+        <li class="textingv3">
+          Daily API request limit exceeded. Please contact us
+        </li>
+      </article>
+    </div>
+    <script src="js/apiCallings.js"></script>
+    <script src="js/dropDownMenu.js"></script>
+  </body>
 </html>

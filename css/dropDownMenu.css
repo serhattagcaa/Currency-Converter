@@ -1,0 +1,137 @@
+.dropdown-button-left {
+    font-family: textingv1;
+    font-size:30px;
+    background: #D98D62;
+    width: 106px;
+    height: 80.49px;
+    border-radius: 12px 0px 0px 12px;
+    cursor: pointer;
+    border: 3px #C6632B solid;
+    border-right-width: 2px;
+    transition: all 0.3s ease; /* Genel geçiş efekti ekledim */
+}
+
+.dropdown-button-left.closing, .dropdown-button-right.closing {
+    transition: border-radius 1s ease-in-out;
+}
+
+.dropdown-button-right {
+    font-family: textingv1;
+    font-size:30px;
+    background: #D98D62;
+    width: 106px;
+    height: 80.49px;
+    border-radius: 0px 12px 12px 0px;
+    cursor: pointer;
+    border: 3px #C6632B solid;
+    border-left-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-button-left.active {
+    border-radius: 12px 0px 0px 0px;
+}
+
+.dropdown-button-right.active {
+    border-radius: 0px 12px 0px 0px;
+}
+
+/* Menü içerik */
+.dropdown-content-left {
+    font-family: textingv1;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 106px;
+    overflow-y: auto;
+    text-align: center;
+    transition: max-height 0.4s ease;
+    background: #f7f2c8;
+    max-height: 0;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0px 0px 0px 12px;
+}
+
+.dropdown-content-right {
+    font-family: textingv1;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 106px;
+    overflow-y: auto;
+    text-align: center;
+    transition: max-height 0.4s ease;
+    background: #f7f2c8;
+    max-height: 0;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0px 0px 12px 0px;
+}
+/* Menü linkleri */
+.dropdown-content-left a,
+.dropdown-content-right a {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Hover efekti için geçiş ekledim */
+}
+
+/* Scrollbar gizleme */
+.dropdown-content-left::-webkit-scrollbar,
+.dropdown-content-right::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown-content-left,
+.dropdown-content-right {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Hover efektleri */
+.dropdown-content-left a:hover,
+.dropdown-content-right a:hover {
+    background: #d4d0ad;
+}
+
+/* Buton hover efekti */
+.dropdown-button-left:hover,
+.dropdown-button-right:hover {
+    opacity: 0.9;
+}
+
+/* Açık menü için stil */
+.show {
+    max-height: 300px;
+    border-top: none;
+}
+
+@media screen and (max-width: 400px) {
+
+    .dropdown-button-left, .dropdown-button-right {
+        width: 60px;
+        height: 46px;
+        font-size: 20px;
+        list-style-type: none;
+        border: #C6632B solid 2px;  /* Daha ince sınır */
+    }
+
+    .dropdown-button-left {
+        border-right: 0.5px solid #C6632B; /* Sağ sınır */
+    }
+
+    .dropdown-button-right {
+        border-left: 0.5px solid #C6632B; /* Sol sınır */
+    }
+
+    .dropdown-content-left, .dropdown-content-right {
+        width: 60px;
+        font-size: 20px;
+    } 
+}
